@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.fx.inputcontroller.NewSportEventController">
+   <children>
+      <Label alignment="CENTER" layoutX="207.0" layoutY="9.0" text="Desporgest" textAlignment="CENTER">
+         <font>
+            <Font name="Euphemia" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="194.0" layoutY="61.0" text="%label.createSportEvent" textAlignment="CENTER">
+         <font>
+            <Font name="Euphemia" size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutY="117.0" prefHeight="193.0" prefWidth="588.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="165.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" prefWidth="435.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="163.0" text="%label.designation" textAlignment="CENTER">
+               <font>
+                  <Font name="Euphemia" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="163.0" text="%label.type" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Euphemia" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="163.0" text="%label.numParts" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Euphemia" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="163.0" text="%label.numArb" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Euphemia" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="163.0" text="%label.date" textAlignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Euphemia" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="163.0" text="%label.periodicity" textAlignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Euphemia" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="designationTextField" prefHeight="25.0" prefWidth="297.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="typeComboBox" onAction="#typeSelected" prefHeight="25.0" prefWidth="237.0" promptText="%label.insideType" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="periodicityComboBox" onAction="#periodicitySelected" prefHeight="25.0" prefWidth="237.0" promptText="%label.insidePeriodicity" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dateTextField" onAction="#datePicker" prefHeight="25.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="numPartsTextField" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="375.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="numRefereeTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button layoutX="436.0" layoutY="326.0" mnemonicParsing="false" onAction="#createSportEventAction" prefHeight="39.0" prefWidth="125.0" text="%button.create">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
